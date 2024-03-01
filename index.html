@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone hunting API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+
+
+                    </div>
+                    <a class="font-bold text-[25px]">Hot Gadgets</a>
+                </div>
+                <div class="navbar-center hidden ">
+
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-[#0D6EFD] text-white">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mx-auto mt-6">
+        <section>
+            <div>
+                <input id="search-field" type="text" placeholder=" Search your phone"
+                    class="input input-bordered w-full max-w-xs" />
+                <button onclick="handleSearch()" class="btn btn-primary">Search</button>
+            </div>
+        </section>
+        <section>
+
+            <!-- loader -->
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner text-primary"></span>
+            </div>
+
+            <!-- search result -->
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            </div>
+        </section>
+        <!-- show all button -->
+        <div onclick="handleShowAll()" id="show-all-container" class="my-8 text-center hidden">
+            <button class="btn btn-primary ">Show All</button>
+        </div>
+        <!-- show modal  -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- Open the modal using ID.showModal() method -->
+
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 id="show-detail-phone-name" class="font-bold text-lg"></h3>
+                <div id="show-detail-container">
+
+                </div>
+                <p class="py-4"></p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </main>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
